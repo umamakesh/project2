@@ -105,12 +105,4 @@ public class FriendController {
 		return new ResponseEntity<List<Friend>> (myfriends,HttpStatus.OK);
 	}
 	
-	/*private void updateRequest(String friendid,String status,HttpSession session)
-	{
-		String loggedInUserId = (String) session.getAttribute("loggedInUserId");
-		friend.setUserid(loggedInUserId);
-		friend.setFriendid(friendid);
-		friend
-		friendDAO.update(friend);
-	}*/
 }

@@ -4,7 +4,7 @@ app.factory('BlogService', ['$http', '$q','$rootScope', function($http, $q,$root
 	
 	console.log("BlogService...")
 	
-	var BASE_URL='http://localhost:9080/CollabBackEnd'
+	var BASE_URL='http://localhost:8090/CollabBackEnd'
 		
     return {
          

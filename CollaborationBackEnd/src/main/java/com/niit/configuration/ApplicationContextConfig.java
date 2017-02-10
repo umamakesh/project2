@@ -33,7 +33,7 @@ public class ApplicationContextConfig {
 	public DataSource getDataSource() {
 	    DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	    dataSource.setDriverClassName("org.h2.Driver");
-	    dataSource.setUrl("jdbc:h2:tcp://localhost/~/c1");
+	    dataSource.setUrl("jdbc:h2:tcp://localhost/~/makip2");
 	    dataSource.setUsername("sa");
 	    dataSource.setPassword("");
 	    System.out.println("creating datasource");

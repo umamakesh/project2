@@ -6,7 +6,11 @@
 </head>
 <style>
 body { 
-  background: url(pages/back.jpg) no-repeat center center fixed; 
+  background:
+		url("http://www.colourmeasure.com/perch/resources/glass.jpg")
+		no-repeat center center fixed;
+		font:oblique;
+	size:18;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,13 +22,74 @@ opacity: 0.9;
 margin-top:30px;
 }
 .form-group.last { margin-bottom:0px; }
+
+.jumbotron {
+	text-align: center;
+	width: 50rem;
+	border-radius: 0.5rem;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: center fixed;
+	margin: 4rem auto;
+	background-color: transparent;
+	padding: 2rem;
+}
+
+.container .glyphicon-log-in {
+	font-size: 10rem;
+	margin-top: 3rem;
+	color: #f96145;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 1.4rem;
+	padding: 1rem;
+	background-color: #ecf2f4;
+	border-radius: 0.2rem;
+	border: none;
+}
+h2 {
+	margin-bottom: 3rem;
+	font-weight: bold;
+	color: #ababab;
+}
+.btn {
+	border-radius: 0.2rem;
+}
+.btn .glyphicon {
+	font-size: 3rem;
+	color: #fff;
+}
+.full-width {
+	background-color: #8eb5e2;
+	width: 100%;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.form-group {
+	position: center fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 3rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
 </style>
 <body>
 <div ng-controller="UserController as ctrl">
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-7">
-            <div class="panel panel-default">
+    <div class="jumbotron">
+  <div class="container">
+    <span class="glyphicon glyphicon-log-in"></span>
+    <h2>Log In</h2>
                 <div class="panel-heading">
                     <span class="glyphicon glyphicon-lock"></span> Login</div>
                      <div class="panel-body">
@@ -32,27 +97,18 @@ margin-top:30px;
         <div class="form-group" ng-class="{ 'has-error': form.userid.$dirty && form.userid.$error.required }">
             <label for="username" class="col-sm-3 control-label">User ID:</label>
             <div class="col-sm-9">
-            <input type="text" name="userid" id="userid" class="form-control" ng-model="ctrl.Userdetails.userid" required />
+            <input type="text" name="userid" placeholder="UserID" id="userid" class="form-control" ng-model="ctrl.Userdetails.userid" required />
             <span ng-show="form.userid.$dirty && form.userid.$error.required" class="help-block">User Id is required</span>
         </div>
         </div>
         <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
             <label for="password" class="col-sm-3 control-label">Password</label>
             <div class="col-sm-9">
-            <input type="password" name="password" id="password" class="form-control" ng-model="ctrl.Userdetails.password" required />
+            <input type="password" name="password" placeholder="Password" id="password" class="form-control" ng-model="ctrl.Userdetails.password" required />
             <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
         </div>
         </div>
-         <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"/>
-                                    Remember me
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+        
         <div class="form-actions">
          <div class="form-group last">
                         <div class="col-sm-offset-3 col-sm-9">
@@ -74,6 +130,16 @@ margin-top:30px;
         
    
 </div>
-
+<!-- <div class="jumbotron">
+  <div class="container">
+    <span class="glyphicon glyphicon-log-in"></span>
+    <h2>Log In</h2>
+    <div class="box">
+        <input type="text" placeholder="username">
+	    <input type="password" placeholder="password">
+	    <button class="btn btn-default full-width"><span class="glyphicon glyphicon-ok"></span></button>
+    </div>
+  </div>
+</div> -->
 </body>
 </html>

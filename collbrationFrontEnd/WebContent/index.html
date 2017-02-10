@@ -5,6 +5,7 @@
    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
@@ -17,7 +18,11 @@
 </head>
 <style>
 @import url(//fonts.googleapis.com/css?family=Roboto:500,700);
-
+body {
+	background:
+		url("http://www.colourmeasure.com/perch/resources/glass.jpg")
+		no-repeat center center fixed;
+}
 .animate {
     -webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -33,72 +38,7 @@
 	transition-duration: 0.2s;
 }
 
-.navbar-pink {
-    background-color: rgb(255, 121, 185);
-    border-color: rgb(194, 97, 135);
-    border-radius: 0;
-    border-top-width: 0;
-    color: rgb(255, 255, 255);
-    font-family: Roboto,sans-serif;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-.navbar-pink .navbar-toggle .icon-bar {
-    background-color: rgb(255, 255, 255);   
-}
-.navbar-pink a.navbar-brand {
-    color: rgb(255, 255, 255);    
-    font-weight: 700;
-}
-.navbar-pink .navbar-nav > li > a,
-.navbar-pink .navbar-nav > li > .dropdown-menu > li > a {
-    color: rgb(255, 255, 255);
-    display: block;
-    letter-spacing: 2px;
-}
-.navbar-pink .navbar-nav > li.dropdown {
-    
-}
-.navbar-pink .navbar-nav > li.dropdown > a:nth-of-type(2) {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-}
-.navbar-pink .navbar-nav > li.dropdown.open > a:nth-of-type(2),
-.navbar-pink .navbar-nav > li.dropdown:focus > a:nth-of-type(2),
-.navbar-pink .navbar-nav > li.dropdown:hover > a:nth-of-type(2) {
-    border-left: 2px solid rgb(255, 121, 185);
-}
-.navbar-pink .navbar-nav > li.dropdown.open > a,
-.navbar-pink .navbar-nav > li.dropdown:focus > a, 
-.navbar-pink .navbar-nav > li.dropdown:hover > a,
-.navbar-pink .navbar-nav > .active > a, 
-.navbar-pink .navbar-nav > li > a:focus, 
-.navbar-pink .navbar-nav > li > a:hover {
-    color: rgb(51, 51, 51);
-    background-color: rgb(235, 235, 235);
-    border-bottom: 5px solid rgb(255, 121, 185);
-    padding-bottom: 10px;
-}
-.navbar-pink .navbar-nav > li > .dropdown-menu {
-    background-color: rgb(255, 121, 185);
-    border-radius: 0px;
-    min-width: 100%;  
-    padding: 0px;
-}
-.navbar-pink .navbar-nav > li > .dropdown-menu > li > a {
-    display: block;
-    padding: 10px 20px;
-}
-.navbar-pink .navbar-nav > li > .dropdown-menu > .active > a, 
-.navbar-pink .navbar-nav > li > .dropdown-menu > li > a:focus, 
-.navbar-pink .navbar-nav > li > .dropdown-menu > li > a:hover {
-    color: rgb(51, 51, 51);
-    background-color: rgb(235, 235, 235);
-    border-left: 5px solid rgb(255, 121, 185);
-    padding-left: 15px;
-    width: 100%;
-}
+
 @media (min-width: 768px) {
     .navbar-pink .navbar-nav > li.dropdown > a {
         display: inline-block;
@@ -116,14 +56,29 @@
 
 
 </style>
+
+
+
+
 <body>
-    <nav class="navbar-pink">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">LetzMingle</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#/">Home</a></li>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-body">ZUMBOOOOO
+				
+				 <ul class="nav navbar-nav navbar-right">
+   
+<!--       <li><a href="#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+       <li><a href="#/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        
+            </div>
+    
+    </ul>
+			</div>
+			<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<ul class="nav navbar-nav">
+						<li><a href="#/">Home</a></li>
       <li><a href="#">About Us</a></li>
        <li class="dropdown">
        <a class="dropdown-toggle" data-toggle="dropdown"  href="#/Blog">Friend<span class="caret"></span></a>
@@ -155,16 +110,12 @@
     </li>
    
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-   
-<!--       <li><a href="#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-      <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-     </div>
     
-    </ul>
-  </div>
-</nav>
-   
+				</div>
+				</div>
+			</nav>
+
+
    
    
     <div ng-view></div>

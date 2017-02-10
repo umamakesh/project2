@@ -142,6 +142,8 @@ public class UserController {
 		friendDAO.setOffLine(userdetails.getUserid());
 		userdetailsDAO.setOffLine(userdetails.getUserid());
 		session.invalidate();
+		System.out.println("User logged out does not exist");
 		return new ResponseEntity<Userdetails>(userdetails,HttpStatus.OK);
+		
 	}
 }

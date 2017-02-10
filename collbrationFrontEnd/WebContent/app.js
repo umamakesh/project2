@@ -29,6 +29,10 @@ app.config(function($routeProvider) {
     templateUrl : 'pages/login.html',
     controller  : 'UserController'
   })
+  .when('/logout', {
+    templateUrl : 'pages/login.html',
+    controller  : 'UserController'
+  })
  .when('/register', {
     templateUrl : 'pages/register.html',
     controller  : 'UserController'
